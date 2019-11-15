@@ -1,7 +1,5 @@
-<h1>Add your doses for <%= @cocktail.name %></h1>
-
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
     <%= f.input :description %>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, input_html: {class: 'select2', class: 'rounded-sm'}, include_hidden: false%>
     <%= f.button :submit %>
 <% end %>

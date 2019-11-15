@@ -6,8 +6,10 @@
     <p> <%= "#{dose.ingredient.name} - #{dose.description}" %> <span><%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }  %></span></p>
   <% end %>
 
-  <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary'  %>
-
+  <div>
+    <h2>Add your ingredients here</h2>
+    <%= render 'doses/form' %>
+  </div>
   <%= link_to 'All cocktails', cocktails_path, class: 'btn btn-primary' %>
 </div>
 
