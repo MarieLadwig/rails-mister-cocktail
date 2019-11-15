@@ -1,10 +1,15 @@
-<div class="container">
-  <h1 class='add-cocktail'> Add a cocktail </h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1502819126416-d387f86d47a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80')">
+  <div class="container">
+    <%= link_to 'All cocktails', root_path, class: 'btn btn-success'  %>
+    <h1> Add a cocktail</h1>
+  </div>
+</div>
+
+<div class="container new-cocktail-form">
   <%= simple_form_for(@cocktail) do |f| %>
     <%= f.input :name %>
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.button :submit, class: 'btn btn-success' %>
   <% end %>
-  <%= link_to 'All cocktails', root_path, class: 'btn btn-success' %>
 </div>
