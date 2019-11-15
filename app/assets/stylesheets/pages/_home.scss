@@ -3,3 +3,12 @@ body {
   background-color: white;
   padding-bottom: 100px;
 }
+
+.cocktail-list {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  p > a {
+    color: $green;
+    font-size: 18px
+  }
+}
