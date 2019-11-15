@@ -44,9 +44,6 @@ puts 'Creating cocktails...'
   gin_tonic.remote_photo_url = 'https://images.unsplash.com/photo-1473348229220-66f5e48021f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
   gin_tonic.save
 
-  sex_on_the_beach = Cocktail.new(name: 'Sex on the Beach')
-  sex_on_the_beach.remote_photo_url = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsouthbaybeachclub.com%2Fwp-content%2Fuploads%2F2016%2F10%2FFotolia_64915564_S.jpg&f=1&nofb=1'
-  sex_on_the_beach.save
 
 puts 'Finished with cocktails'
 
@@ -87,16 +84,6 @@ doses = [
     description: '1cl',
     cocktail: Cocktail.find_by(name:'Gin Tonic'),
     ingredient: Ingredient.find_by(name:'Gin')
-  },
-  {
-    description: '1cl',
-    cocktail: Cocktail.find_by(name:'Sex on the Beach'),
-    ingredient: Ingredient.find_by(name:'Vodka')
-  },
-  {
-    description: '2cl',
-    cocktail: Cocktail.find_by(name:'Sex on the Beach'),
-    ingredient: Ingredient.find_by(name:'Cranberry juice')
   },
 ]
 
