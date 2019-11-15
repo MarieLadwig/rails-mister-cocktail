@@ -1,0 +1,15 @@
+.banner {
+  padding: 230px 0;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+  a {
+    position: absolute;
+    top: 50px;
+    right: 50px
+  }
+}
+

@@ -1,0 +1,14 @@
+.ingredients {
+  padding: 50px 0px 0px 0px;
+  h2 {
+    color: $green
+  }
+  a {
+    color: $grey-link;
+    text-decoration: none
+  }
+
+  a:hover {
+    color: $grey-link-hover;
+  }
+}

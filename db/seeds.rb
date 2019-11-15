@@ -11,7 +11,13 @@ ingredients_array = JSON.parse(open(url).read)['drinks']
 
 puts 'Creating ingredients...'
 
-ingredients = []
+ingredients = [
+  { name: 'Mint' },
+  { name: 'Rasberries' },
+  { name: 'Basil' },
+  { name: 'Cucumber' },
+  { name: 'Tonic' }
+]
 ingredients_array.each do |ingredient|
   ingredients << {
     name: ingredient["strIngredient1"]}
@@ -22,15 +28,25 @@ puts 'Finished with ingredients'
 
 puts 'Creating cocktails...'
 
-cocktails = [
-  {name: 'Mojito'},
-  {name: 'Daiquiri'},
-  {name: 'Cuba Libre'},
-  {name: 'Gin Tonic'},
-  {name: 'Sex on the Beach'}
-]
+  mojito = Cocktail.new(name: 'Mojito')
+  mojito.remote_photo_url = 'http://wallsdesk.com/wp-content/uploads/2017/01/Mojito-Wallpapers.jpg'
+  mojito.save
 
-Cocktail.create!(cocktails)
+  daiquiri = Cocktail.new(name: 'Daiquiri')
+  daiquiri.remote_photo_url = 'https://us.emedemujer.com/wp-content/uploads/sites/3/2018/07/iStock-691972236.jpg'
+  daiquiri.save
+
+  cuba = Cocktail.new(name: 'Cuba Libre')
+  cuba.remote_photo_url = 'https://images.unsplash.com/photo-1447943549184-13f89172bcd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+  cuba.save
+
+  gin_tonic = Cocktail.new(name: 'Gin Tonic')
+  gin_tonic.remote_photo_url = 'https://images.unsplash.com/photo-1473348229220-66f5e48021f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+  gin_tonic.save
+
+  sex_on_the_beach = Cocktail.new(name: 'Sex on the Beach')
+  sex_on_the_beach.remote_photo_url = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsouthbaybeachclub.com%2Fwp-content%2Fuploads%2F2016%2F10%2FFotolia_64915564_S.jpg&f=1&nofb=1'
+  sex_on_the_beach.save
 
 puts 'Finished with cocktails'
 
